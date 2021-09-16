@@ -174,15 +174,18 @@ class Student extends Lambdasian {
     this.favSubjects = studFile.favSubjects;
   }
   listSubjects(){
-    return this.favSubjects.reduce()
+    let str = "Loving ";
+    this.favSubjects.forEach(x => str += ` ${x}`)
+    str += "!";
+    console.log(str);
+    return str;
   }
   PRAssignment(subj){
-
+    return `${this.name} has submitted a PR for ${subj}`
   }
   sprintChallenge(subj){
-
+    return `${this.name} has begun a sprint challenge on ${subj}`
   }
-   
 }
 
 /*
